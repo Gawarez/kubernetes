@@ -1,2 +1,2 @@
 # kubernetes
-Aprendendo Kubernetes
+Repositório para testes e aprendizado
