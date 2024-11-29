@@ -1,2 +1,3 @@
 # kubernetes
-Aprendendo Kubernetes
+
+Repositório de aprendizado do Kubernetes e ferramentas

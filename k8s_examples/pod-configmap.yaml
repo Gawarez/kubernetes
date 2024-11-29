@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-test
+  namespace: test
+spec:
+  containers:
+    - name: test-container
+      image: registry.k8s.io/busybox
+      command: [ "/bin/sh", "-c", "echo $CLIENT_ALIAS" ]
+      envFrom:
+      - configMapRef:
+          name: cm-test
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm-test
+  namespace: test
+data:
+  CLIENT_ALIAS: "Teste env k8s"
+
+# ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
